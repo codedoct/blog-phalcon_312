@@ -6,13 +6,25 @@
 defined('BASE_PATH') || define('BASE_PATH', getenv('BASE_PATH') ?: realpath(dirname(__FILE__) . '/../..'));
 defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
+if (!function_exists('env')) {
+    /**
+     * Load composer
+     */
+    include_once APP_PATH . "/config/start.php";
+
+    /**
+     * Include Shortcode
+     */
+    include_once BASE_PATH . '/shortcode.php';
+}
+
 return new \Phalcon\Config([
     'database' => [
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
-        'username'    => 'root',
-        'password'    => 'root',
-        'dbname'      => 'phalcon-experiment_3_1_2',
+        'username'    => env('DB_USER'),
+        'password'    => env('DB_PASS'),
+        'dbname'      => env('DB_NAME'),
         'charset'     => 'utf8',
     ],
     'application' => [

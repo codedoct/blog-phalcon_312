@@ -63,7 +63,7 @@ class Users extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("phalcon-experiment_3_1_2");
+        $this->setSchema("phalcon-experiment_312");
     }
 
     /**

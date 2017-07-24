@@ -9,6 +9,11 @@ define('APP_PATH', BASE_PATH . '/app');
 try {
 
     /**
+     * Load start
+     */
+    include_once APP_PATH . "/config/start.php";
+
+    /**
      * The FactoryDefault Dependency Injector automatically registers
      * the services that provide a full stack framework.
      */
