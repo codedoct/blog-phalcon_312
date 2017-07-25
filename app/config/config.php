@@ -8,14 +8,9 @@ defined('APP_PATH') || define('APP_PATH', BASE_PATH . '/app');
 
 if (!function_exists('env')) {
     /**
-     * Load composer
+     * Load start
      */
     include_once APP_PATH . "/config/start.php";
-
-    /**
-     * Include Shortcode
-     */
-    include_once BASE_PATH . '/shortcode.php';
 }
 
 return new \Phalcon\Config([

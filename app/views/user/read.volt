@@ -1,2 +1,6 @@
-<br/>
-Hello codedoct!!!
+{% extends 'layouts/default1.volt' %}
+
+{% block content %}
+	<br/>
+	Hello codedoct!!!
+{% endblock %}

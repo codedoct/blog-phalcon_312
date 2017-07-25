@@ -31,7 +31,7 @@ if (env('APP_ENV') == 'dev')
         }
     }
 
-    if (! function_exists('dd')) {
+    if (!function_exists('dd')) {
         /**
          * Dump the passed variables and end the script.
          *

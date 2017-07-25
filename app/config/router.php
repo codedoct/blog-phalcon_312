@@ -7,12 +7,19 @@ $router = $di->getRouter();
  * Get user lists data by query
  */
 $router->addGet(
-    "/users",
+    "/user",
     [
         "controller"        => "user",
         "action"            => "read"
     ]
 );
 
+$router->addGet(
+    "/test",
+    [
+        "controller"        => "test",
+        "action"            => "test"
+    ]
+);
 
 $router->handle();
