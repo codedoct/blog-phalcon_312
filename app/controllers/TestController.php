@@ -10,7 +10,8 @@ class TestController extends ControllerBase
     		'PR' => 'Perempuan'
     	];
         $data['users'] = $users;
-    	$data['genders'] = $genders;
+        $data['genders'] = $genders;
+        dd($data);
     	$this->view->data = $data;
     	$this->view->title = "Phalcon - User";
     }

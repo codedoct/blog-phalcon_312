@@ -1,6 +1,16 @@
 {
+	"name": "codedoct",
+	"type": "project",
+	"authors": [
+        {
+            "name": "Mihawk"
+        }
+    ],
 	"require": {
-		"guzzlehttp/guzzle": "~6.0",
-		"vlucas/phpdotenv": "~2.0"
-	}
+		"guzzlehttp/guzzle": "~6.0"
+	},
+	"require-dev": {
+        "symfony/var-dumper": "2.7.*",
+        "vlucas/phpdotenv": "~2.0"
+    }
 }
