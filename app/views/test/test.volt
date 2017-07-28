@@ -7,11 +7,13 @@
 			Hello codedoct!!!
 			<br>
 			users:
-			<ul>
-				{% for user in data['users'] %}
-					<li>{{user}}</li>
-				{% endfor %}
-			</ul>
+			{% if (data['users']) %}
+				<ul>
+					{% for user in data['users'] %}
+						<li>{{user}}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
 		</div>
 	</div>
 
@@ -26,7 +28,7 @@
 		</div>
 	</div>
 	<br>
-	<h5>Yang atas pakek form phalcon yang bawah menggunakan form biasa</h5>
+	<h5>Yang atas menggunakan form phalcon yang bawah menggunakan form biasa</h5>
 	<div class="row">
 		<div class="col-md-12">
 			{{ form.label('name') }}
