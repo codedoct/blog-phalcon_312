@@ -1,7 +1,7 @@
 <?php
 
 use Phalcon\Validation;
-use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
+use Phalcon\Validation\Validator\Email as EmailValidator;
 
 class Users extends \Phalcon\Mvc\Model
 {
@@ -11,21 +11,21 @@ class Users extends \Phalcon\Mvc\Model
      * @var integer
      * @Primary
      * @Identity
-     * @Column(type="integer", length=11, nullable=false)
+     * @Column(type="integer", length=20, nullable=false)
      */
     public $id;
 
     /**
      *
      * @var string
-     * @Column(type="string", length=100, nullable=false)
+     * @Column(type="string", length=50, nullable=false)
      */
     public $name;
 
     /**
      *
      * @var string
-     * @Column(type="string", length=100, nullable=false)
+     * @Column(type="string", length=150, nullable=false)
      */
     public $email;
 
@@ -35,6 +35,20 @@ class Users extends \Phalcon\Mvc\Model
      * @Column(type="string", nullable=true)
      */
     public $address;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", nullable=true)
+     */
+    public $created_at;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", nullable=true)
+     */
+    public $updated_at;
 
     /**
      * Validations and business logic
@@ -80,7 +94,7 @@ class Users extends \Phalcon\Mvc\Model
      * Allows to query a set of records that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Users[]|Users
+     * @return Users[]|Users|\Phalcon\Mvc\Model\ResultSetInterface
      */
     public static function find($parameters = null)
     {
@@ -91,7 +105,7 @@ class Users extends \Phalcon\Mvc\Model
      * Allows to query the first record that match the specified conditions
      *
      * @param mixed $parameters
-     * @return Users
+     * @return Users|\Phalcon\Mvc\Model\ResultInterface
      */
     public static function findFirst($parameters = null)
     {

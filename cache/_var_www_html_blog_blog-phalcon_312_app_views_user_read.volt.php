@@ -13,6 +13,26 @@
             
 	<br/>
 	Hello codedoct!!!
+	<div class="row">
+		<div class="col-md-12">
+			user list:
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Address</th>
+				</tr>
+				<?php foreach ($users as $user) { ?>
+					<tr>
+						<td><?= $user->name ?></td>
+						<td><?= $user->email ?></td>
+						<td><?= $user->address ?></td>
+					</tr>
+				<?php } ?>
+			</table>
+				
+		</div>
+	</div>
 
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

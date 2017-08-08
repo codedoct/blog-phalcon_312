@@ -16,7 +16,7 @@ if (!function_exists('env')) {
 return new \Phalcon\Config([
     'database' => [
         'adapter'     => 'Mysql',
-        'host'        => 'localhost',
+        'host'        => env('DB_HOST'),
         'username'    => env('DB_USER'),
         'password'    => env('DB_PASS'),
         'dbname'      => env('DB_NAME'),
