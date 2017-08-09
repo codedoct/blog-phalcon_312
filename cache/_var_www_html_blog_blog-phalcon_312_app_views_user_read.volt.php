@@ -13,20 +13,20 @@
             
 	<br/>
 	Hello codedoct!!!
+	<br><br>
 	<div class="row">
 		<div class="col-md-12">
 			user list:
-			<table>
+			<br><br>
+			<table width="100%">
 				<tr>
 					<th>Name</th>
-					<th>Email</th>
-					<th>Address</th>
+					<th>Action</th>
 				</tr>
 				<?php foreach ($users as $user) { ?>
 					<tr>
 						<td><?= $user->name ?></td>
-						<td><?= $user->email ?></td>
-						<td><?= $user->address ?></td>
+						<td>show | edit</td>
 					</tr>
 				<?php } ?>
 			</table>

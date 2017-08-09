@@ -3,20 +3,20 @@
 {% block content %}
 	<br/>
 	Hello codedoct!!!
+	<br><br>
 	<div class="row">
 		<div class="col-md-12">
 			user list:
-			<table>
+			<br><br>
+			<table width="100%">
 				<tr>
 					<th>Name</th>
-					<th>Email</th>
-					<th>Address</th>
+					<th>Action</th>
 				</tr>
 				{% for user in users %}
 					<tr>
 						<td>{{ user.name }}</td>
-						<td>{{ user.email }}</td>
-						<td>{{ user.address }}</td>
+						<td><a href="user/{{ user.id }}">show</a> | edit</td>
 					</tr>
 				{% endfor %}
 			</table>

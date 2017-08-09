@@ -10,7 +10,14 @@ $router->addGet(
     "/user",
     [
         "controller"        => "user",
-        "action"            => "read"
+        "action"            => "index"
+    ]
+);
+$router->addGet(
+    "/user/{userId}",
+    [
+        "controller"        => "user",
+        "action"            => "show"
     ]
 );
 
