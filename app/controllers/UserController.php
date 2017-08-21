@@ -21,5 +21,30 @@ class UserController extends ControllerBase
     	$this->view->user = $user;
     	// dd($users);
     }
+
+    public function createAction()
+    {
+        $this->view->title = "Phalcon - Create user";
+    }
+
+    public function saveAction()
+    {
+        $name = $this->request->get('name');
+        $email = $this->request->get('email');
+        $address = $this->request->get('address');
+
+        $user = new Users();
+        $user->name = $name;
+        $user->email = $email;
+        $user->address = $address;
+
+        if ($this->request->isPost()) {
+            if ($user->create()) {
+                return $this->response->redirect('user');
+            }
+        } else {
+            $this->flash->error('User form is not valid.');
+        }
+    }
 }
 

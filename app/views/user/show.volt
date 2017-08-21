@@ -16,5 +16,5 @@
 		</tr>
 	</table>
 	<br><br>
-	<button onclick="window.location.href='http://localhost:2305/BLOG/blog-phalcon_312/user'">Back</button>
+	<button onclick="window.location.href='../user'">Back</button>
 {% endblock %}

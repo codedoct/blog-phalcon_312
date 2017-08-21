@@ -10,8 +10,8 @@ try {
       name varchar( 50 ) COLLATE utf8_unicode_ci NOT NULL,
       email varchar( 150 ) COLLATE utf8_unicode_ci NOT NULL, 
       address text( 150 ) COLLATE utf8_unicode_ci,
-      created_at timestamp NULL,
-      updated_at timestamp NULL
+      created_at timestamp DEFAULT CURRENT_TIMESTAMP,
+      updated_at timestamp DEFAULT CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci");
     print("Created $tablename Table success.\n");
 } catch(PDOException $e) {

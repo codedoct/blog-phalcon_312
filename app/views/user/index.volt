@@ -16,11 +16,12 @@
 				{% for user in users %}
 					<tr>
 						<td>{{ user.name }}</td>
-						<td><a href="user/{{ user.id }}">show</a> | edit</td>
+						<td><a href="user/{{ user.id }}">show</a></td>
 					</tr>
 				{% endfor %}
 			</table>
-				
+			<br>
+			<button onclick="window.location.href='user/create'">Create</button>
 		</div>
 	</div>
 {% endblock %}

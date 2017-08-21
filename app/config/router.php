@@ -20,6 +20,20 @@ $router->addGet(
         "action"            => "show"
     ]
 );
+$router->addGet(
+    "/user/create",
+    [
+        "controller"        => "user",
+        "action"            => "create"
+    ]
+);
+$router->addPost(
+    "/user/create",
+    [
+        "controller"        => "user",
+        "action"            => "save"
+    ]
+);
 
 $router->addGet(
     "/test",
